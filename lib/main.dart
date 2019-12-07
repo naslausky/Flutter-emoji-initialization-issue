@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'dart:ui';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -35,6 +37,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    ParagraphBuilder pb =
+        ParagraphBuilder(ParagraphStyle(locale: window.locale));
+    pb.addText('\ud83d\ude01'); // smiley face emoji
+    pb.build().layout(ParagraphConstraints(width: 100));
     return Scaffold(
       body: Center(
         child: Column(
