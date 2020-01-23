@@ -42,7 +42,10 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               text,
-              style: TextStyle(fontSize: 50),
+              style: TextStyle(
+                fontSize: 50,
+                fontFamilyFallback: <String>['Noto Color Emoji'],
+              ),
             ),
           ],
         ),
